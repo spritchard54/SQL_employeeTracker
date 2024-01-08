@@ -3,10 +3,35 @@ const PORT = process.env.PORT || 3001
 const mysql = require('mysql2/promise')
 const express = require('express')
 const app = express();
+const inquirer = require('inquirer')
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+const questions = [
+  {
+    type: 'list',
+    name: 'questionOne',
+    message: 'What do you want to do.',
+    choices: ['View all departments', 'View all roles', 'View all employees', 'Add a department', 'Add a role', 'Add and employee', 'Update an employee role'],
+    default: ''
+  },
+]
 
-let db = null;
+
+inquirer
+.prompt(questions)
+.then((answers) => {
+console.log(answers);
+})
+.catch((error) => {
+  if (error.isTtyError) {
+    // Prompt couldn't be rendered in the current environment
+  } else {
+    // Something else went wrong
+  }
+});
+
+
+// let db = null;
 
 const init = async () => {
   db = await mysql.createConnection(
@@ -19,17 +44,19 @@ const init = async () => {
       database: 'employeeData_db'
     }
   );
-  console.log(`Connected to the employee_db database.`);
-  console.log(db);
 
-  app.get('/api/UPDATE', (req, res) => {
-    db.query('SELECT * FROM employeeData', function (err, data) {
-      console.log(data);
-      res.json(data);
-    });
-  });
 
-  // TODO use inquirer if you want
+  // console.log(`Connected to the employee_db database.`);
+  // console.log(db);
+
+  // app.get('/api/UPDATE', (req, res) => {
+  //   db.query('SELECT * FROM employeeData', function (err, data) {
+  //     console.log(data);
+  //     res.json(data);
+  //   });
+  // });
+
+
 
   // use prepared_statement
   // const objInput = {
