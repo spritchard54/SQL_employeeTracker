@@ -134,3 +134,6 @@ dist
 
 # DS Store
 **/.DS_Store
+
+#notes.text
+/notes.txt
