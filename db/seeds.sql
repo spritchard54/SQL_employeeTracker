@@ -1,18 +1,21 @@
-INSERT INTO department (id, name)
+INSERT INTO department (name)
     VALUES
-        ( ,"Technology"),
-        ( ,"Strategy");
+        ("Technology"),
+        ("Strategy"),
+        ("Change Management"),
+        ("Project Managemnt");
     
 
-INSERT INTO role (id, title, salary, department_id)
+INSERT INTO role (title, salary, department_id)
     VALUES
-        ( , "Analyst", 100000,  ),
-        ( , "Consultant", 150000, ), 
-        ( , "Sr. Consultant", 200000, ),
-        ( , "Manager", 250000, );
+        ("Analyst", 100000,1),
+        ("Consultant",150000,1), 
+        ("Sr. Consultant",200000,1),
+        ("Manager",250000,1);
 
-INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
     VALUES
-        (1, "Bob", "Smith", "Analyst", 10),
-        (2, "Susan", "Jones", "Consultant", 11),
-        (3, "Morty", "Scott", "Sr. Consultant", 12);
+        ('Bob',   'Smith', 1, 1),
+        ('Susan', 'Jones', 2,  2),
+        ('Morty', 'Scott', 3, 3),
+        ('Ralph', 'Baggins', 4, 1);
