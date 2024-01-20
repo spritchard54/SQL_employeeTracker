@@ -1,6 +1,6 @@
 # SQL_employeeTracker ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-![Readme.md Screenshot](./Assets/Images/Screenshot%202024-01-15%20at%2010.19.20 AM.png)
+![Readme.md Screenshot](./Assets/images/Screenshot%202024-01-20%20at%209.40.44 AM.png)
 
 ## Table of Contents
 [Description](#description)<br>
@@ -13,7 +13,7 @@
 [Questions](#questions)
 
 ## Description
-This is a command line interface (CLI) application built from scratch that is used to manage a company's employee database, using Node.js, Inquirer, and MySQL.
+This is a command line interface (CLI) application built from scratch that is used to manage a company's employee database, using Node.js, Inquirer, and MySQL. Employee Data is stored in a database and accessed using the CLI. The application has view and update functionality and displays data in terminal based on user prompts.
 
 ## Installation
 After downloading the files to your local server, open the index.js file in a new integrated terminal. Install all required packages and then run "node index" from terminal.
